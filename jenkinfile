@@ -1,0 +1,17 @@
+pipeline{
+
+agent any
+stages{
+stage("delete workspace"){
+steps{      
+  cleanWs()
+    }
+}
+     stage("git scm"){
+steps{
+        git 'https://github.com/dhinesh0307/jenkin.git'
+}
+}
+}
+
+}
